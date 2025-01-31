@@ -1,0 +1,9 @@
+body.dark-theme {
+    background-color: #000000;
+    color: #fff;
+}
+
+button#theme-toggle img {
+    width: 30px;
+    height: 30px;
+}
