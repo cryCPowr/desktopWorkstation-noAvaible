@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop Workstation | App </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/light_theme.css" id="theme-stylesheet">
+</head>
+
+<body class="light-theme">
+    <button id="theme-toggle">
+        <img id="theme-icon" src="asset/icon_light_theme.svg" alt="light-theme">
+    </button>
+
+    <div class="remote-container">
+        <div class="remote">
+            <div class="remote-text">Remote</div>
+    
+            <button id="power-toggle">
+                <img id="power-icon" src="asset/button_off_light.svg" alt="Power Off">
+            </button>
+
+            <div class="choose-text">
+                <span class="line2">Operating System</span>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" id="dropdown-button">-- Select --</button>
+                <div class="dropdown-content">
+                    <a href="#" data-value="Windows">Windows</a>
+                    <a href="#" data-value="Linux">Linux</a>
+                    <a href="#" data-value="Android">Android</a>
+                    <a href="#" data-value="iOS">iOS</a>
+                </div>
+            </div>
+            
+            <!-- Baut di dalam remote -->
+            <div class="bottom-left"></div>
+            <div class="bottom-right"></div>
+        </div>
+    </div>
+
+        <!-- Custom Modal -->
+<div id="custom-modal" class="modal">
+    <div class="modal-content">
+        <p id="modal-message">Coming soon!</p>
+        <button class="close-btn" id="close-modal">OK</button>
+    </div>
+</div>
+
+    <script src="js/theme.js"></script>
+    <script src="js/power.js"></script>
+    <script src="js/dropdown.js"></script>
+</body>
+
+</html>

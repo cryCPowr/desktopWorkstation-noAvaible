@@ -1,0 +1,193 @@
+body.light-theme {
+    background-color: #ffffff;
+    color: #333;
+}
+
+button#theme-toggle img {
+    width: 25px;
+    height: 25px;
+}
+
+.remote-container {
+    display: flex;
+    justify-content: center; /* Menempatkan di tengah secara horizontal */
+    align-items: center; /* Menempatkan di tengah secara vertikal */
+    height: 100vh; /* Mengambil tinggi seluruh layar */
+}
+
+/* Desain remote */
+.remote {
+    width: 270px;
+    height: 490px;
+    background-color: #ffffff; /* Warna latar belakang remote */
+    border-radius: 35px; /* Membuat sudut sedikit membulat */
+    border: 5px solid #000000; /* Garis pinggir tipis */
+    display: flex;
+    justify-content: center; /* Menempatkan tombol di tengah horizontal */
+    align-items: center; /* Menempatkan tombol di tengah vertikal */
+    position: relative;
+}
+
+.remote::before,
+.remote::after,
+.remote .bottom-left,
+.remote .bottom-right {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+/* Baut atas kiri & kanan */
+.remote::before { top: 15px; left: 15px; }
+.remote::after { top: 15px; right: 15px; }
+
+/* Baut bawah kiri & kanan */
+.remote .bottom-left { bottom: 15px; left: 15px; }
+.remote .bottom-right { bottom: 15px; right: 15px; }
+
+.remote-text {
+    position: absolute;
+    top: 2%; /* Posisi di dalam remote, agak ke atas */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 35px;
+    font-weight: bold;
+    color: #000000; /* Warna teks */
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#power-toggle {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#power-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.choose-text {
+    position: absolute;
+    top: 50%; /* Menempatkan lebih dekat ke tombol power */
+    left: 45%;
+    transform: translateX(-40%);
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.choose-text span {
+    display: block;
+}
+
+
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+    margin-top: 100px;
+    width: 165px; /* Ukuran tetap */
+}
+
+.dropbtn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: 2px solid black; /* Garis hitam */
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%; /* Lebar tombol sesuai dropdown */
+    text-align: center; /* Agar teks di tengah */
+    font-family: 'Roboto Mono', monospace;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 100%; /* Ukuran tetap */
+    box-shadow: 0px 4px 8px rgb(0, 0, 0);
+    border-radius: 5px;
+    z-index: 1;
+    border: 2px solid black; /* Garis hitam */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Garis pemisah antar item */
+.dropdown-content a:not(:last-child) {
+    border-bottom: 2px solid black;
+}
+
+/* Warna hover */
+.dropdown-content a:hover {
+    background-color: #000000;
+    color: white;
+}
+
+/* Tampilkan dropdown saat 'show' aktif */
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-disabled {
+    background-color: #333333;  /* Warna abu-abu gelap */
+    color: #ffffff;             /* Warna teks putih */
+}
+
+/* Modal background */
+.modal {
+    display: none; /* Tersembunyi secara default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Background semi-transparan */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto Mono', monospace;
+    width: 200px;
+}
+
+/* Tombol tutup */
+.close-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
